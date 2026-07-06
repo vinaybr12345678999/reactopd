@@ -1,0 +1,11 @@
+.card{
+    border: 1px solid black;
+    width: 200px;
+
+}
+.card-price{
+    background-color: yellow;
+}
+.old-price{
+    text-decoration: line-through;
+}
