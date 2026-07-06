@@ -1,0 +1,66 @@
+select * from people 
+where age between 20 and 25;
+select * from people 
+where age >=20 and age<= 30;
+select * from sales
+where sales_date between "2026-01-01" and "2026-03-03";
+select * from people 
+where name between "a" and "m";
+select * from people
+where name like "j%";
+select * from people
+where name like "%n";
+select * from people
+where name like "%o%";
+select * from people
+where name like "j__n";
+select * from people
+where name like "j%n";
+desc customer_2;
+select * from customer_2
+insert into customer_2(id, name,location)
+values
+(5,"jimmy","jimmy@234"),
+(6,"ruby","ruby@234"),
+(7,"jumby","jumby@234"),
+(8,"rohan","rohan@234")
+;
+select * from customer_2
+where name in ('james','jimmy');
+select * from customer_2
+where name in ("james","jimmy");
+select * from customer_2
+where name in ('james','jimmy');
+select * from customer_2
+where name in ('james','jimmy');
+select * from people
+where location is null;
+select * from people
+where location is not null;
+select concat("hello","vinay") as concaty;
+select concat(name,"_",age,"_") as username from people;
+select concat_ws("_",name,age) as username from people;
+select concat_ws("*","a","b") as username from people;
+select concat("hello", null,"world") as username from people;
+select concat_ws("-","hello", null,"world") as username from people;
+select concat("-","hello", null,"world") as username  ;
+select concat_ws("-","hello", null,"world") as username  ;
+select substring("programming",1,4);
+select substring("programming",4);
+select replace("programming","mming","","mmingmango");
+select replace("apple" "apple" ,"apple","mango");
+select replace("1234567-912","-" ,- "$");
+select instr("programming","gra");
+select instr("hey mike and mike","mike ");
+select locate("mike","hey mike and mike",1)
+select locate("mike","hey mike and mike",9);
+select locate("mike","hey mike and mike and mike",18);
+select locate("@",location)from customer_2;
+select locate("@",location)-1 from customer_2;
+select substring("email",1, locate("@",location))from customer_2;
+select substring(location,1, locate("@",location)-1)from customer_2;
+select substring(location,1, locate("@",location))from customer_2;
+select substring(location,1, 4)from customer_2;
+select length("🤣");
+select left("hello world",4);
+select left("file.pdy",3);

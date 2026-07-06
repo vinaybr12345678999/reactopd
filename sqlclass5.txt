@@ -1,0 +1,94 @@
+show tables;
+ select upper("vinay");
+ select lower("VINAY");
+ desc test;
+ create table test(id int primary key not null, age int,email varchar(30));
+ desc test;
+ insert into test(email,age,id) values(upper("vinay@123"),25,1);
+ select * from test;
+ select trim('             hello        ');
+  select rtrim('             hello        ');
+  select trim(null);
+  select reverse("vinay");
+  select 10+20;
+  select name ,age, age+5 as after5years from people;
+  create table cart(id int primary key auto_increment,item_name varchar(30),item_price int,item_city int);
+  desc cart;
+  insert into cart(item_name,item_price,item_nam)values
+  ("phone",300,2),
+   ("laptop",900,1),
+    ("tab",500,3)
+    ;
+    select * from cart;
+    select id, item_name,item_price,item_city,item_price*item_city as total_price from cart;
+  select sum(item_price*item_city) as final from cart;
+  select item_price-item_price*10/100 from cart;
+   select item_price,item_price*0.1,item_price+item_price*0.1 
+   from cart;
+    select item_price+item_price*10/100 from cart;
+    select 10+null;
+    alter table people
+    add username varchar(30);
+    select * from people;
+     alter table people
+    add salary int not null;
+      alter table people
+    drop column salary,drop column username;
+     alter table people
+    add salary int not null after age;
+     alter table people
+     modify column age varchar(30);
+    
+  desc people;  
+  alter table people
+     modify column location varchar(30) default "ind";
+     select * from people;
+     alter table people
+     rename to student;
+     desc people;
+      alter table people
+    change location country varchar(30);
+   select * from student;
+     desc student;
+     create table peoples(id int,name varchar(30),age int);
+     desc people;
+     desc peoples;
+     alter table peoples
+     modify column name varchar(30) not null;
+       desc peoples;
+        alter table peoples
+         alter table peoples
+     modify column id varchar(30) not null;
+     modify column name varchar(30) not null;
+     alter table peoples
+     add primary key(id);
+       alter table peoples
+     modify column id int auto_increment;
+     alter table peoples
+     add unique(name);
+     show index from peoples;
+     alter table peoples
+     drop index name;
+     alter table peoples
+     drop primary key; 
+     show index from peoples;
+    desc peoples;
+    alter table peoples
+    drop index name;
+    show index from peoples;
+     
+   select * from peoples;
+   alter table people
+   rename to students;
+   desc students;
+   
+  select * from students;
+   desc test;
+    select * from test;
+     select * from customer_1;
+ select * from student;
+select * from student  order by  age;
+select * from student  order by  age desc;
+select * from student  order by  age desc limit 3 ;
+update student 
+set age=50

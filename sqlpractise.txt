@@ -1,0 +1,453 @@
+
+mysql> create database social_dh;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use social_dh;
+Database changed
+mysql> select database();
++------------+
+| database() |
++------------+
+| social_dh  |
++------------+
+1 row in set (0.00 sec)
+
+mysql> create table people(id int,name varchar(30),age int,location varchar(30));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> desc people;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int         | YES  |     | NULL    |       |
+| name     | varchar(30) | YES  |     | NULL    |       |
+| age      | int         | YES  |     | NULL    |       |
+| location | varchar(30) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| abhi               |
+| akaa               |
+| akka               |
+| alls               |
+| amm                |
+| anjali             |
+| basicboot          |
+| be                 |
+| boot               |
+| boot1              |
+| bootstrap          |
+| cakee              |
+| chambu             |
+| chinku             |
+| cricket            |
+| csk                |
+| demo               |
+| demo1              |
+| hibernate          |
+| information_schema |
+| jecm4              |
+| jecm5              |
+| jecm6              |
+| jecm7              |
+| jeeva              |
+| jehm31             |
+| jese8              |
+| jhon               |
+| jock               |
+| jvm22              |
+| mahima             |
+| manu               |
+| manytomany         |
+| manytoone          |
+| mock               |
+| mohith             |
+| mysql              |
+| new_schema         |
+| onetomany          |
+| onetomany5         |
+| onetoone           |
+| onetoone3          |
+| performance_schema |
+| projectboot        |
+| punarvi            |
+| sakila             |
+| shannuchakka       |
+| sheela             |
+| shoppingcart1      |
+| social_db          |
+| social_dh          |
+| springproject      |
+| springproject1     |
+| student08          |
+| sun                |
+| sunil              |
+| sunilaa            |
+| sys                |
+| testdb             |
+| to one3 one        |
+| vir                |
+| viru               |
+| world              |
++--------------------+
+63 rows in set (0.00 sec)
+
+mysql> drop database shannuchakka;
+Query OK, 1 row affected (0.06 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| abhi               |
+| akaa               |
+| akka               |
+| alls               |
+| amm                |
+| anjali             |
+| basicboot          |
+| be                 |
+| boot               |
+| boot1              |
+| bootstrap          |
+| cakee              |
+| chambu             |
+| chinku             |
+| cricket            |
+| csk                |
+| demo               |
+| demo1              |
+| hibernate          |
+| information_schema |
+| jecm4              |
+| jecm5              |
+| jecm6              |
+| jecm7              |
+| jeeva              |
+| jehm31             |
+| jese8              |
+| jhon               |
+| jock               |
+| jvm22              |
+| mahima             |
+| manu               |
+| manytomany         |
+| manytoone          |
+| mock               |
+| mohith             |
+| mysql              |
+| new_schema         |
+| onetomany          |
+| onetomany5         |
+| onetoone           |
+| onetoone3          |
+| performance_schema |
+| projectboot        |
+| punarvi            |
+| sakila             |
+| sheela             |
+| shoppingcart1      |
+| social_db          |
+| social_dh          |
+| springproject      |
+| springproject1     |
+| student08          |
+| sun                |
+| sunil              |
+| sunilaa            |
+| sys                |
+| testdb             |
+| to one3 one        |
+| vir                |
+| viru               |
+| world              |
++--------------------+
+62 rows in set (0.00 sec)
+
+mysql> exist
+    -> \cl
+    -> \cls
+    -> \c
+mysql> exist;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'exist' at line 1
+mysql> exit;
+Bye
+
+C:\Users\admin>mysql -u root -p
+Enter password: ***************
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+
+C:\Users\admin>mysql -u root -p
+Enter password: ***************
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+
+C:\Users\admin>mysql -u root -p
+Enter password: **************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 13
+Server version: 8.0.45 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use social_dh;
+Database changed
+mysql> show tables;
++---------------------+
+| Tables_in_social_dh |
++---------------------+
+| people              |
++---------------------+
+1 row in set (0.02 sec)
+
+mysql> desc people;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int         | YES  |     | NULL    |       |
+| name     | varchar(30) | YES  |     | NULL    |       |
+| age      | int         | YES  |     | NULL    |       |
+| location | varchar(30) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> inert into people value(1,"jhon","usa");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inert into people value(1,"jhon","usa")' at line 1
+mysql> insert into people value(1,"jhon","usa");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into people values(1,"jhon","usa");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into people values(1,"jhon",23,"usa");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> desc people;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int         | YES  |     | NULL    |       |
+| name     | varchar(30) | YES  |     | NULL    |       |
+| age      | int         | YES  |     | NULL    |       |
+| location | varchar(30) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql>
+mysql> select *
+    -> from people;
++------+------+------+----------+
+| id   | name | age  | location |
++------+------+------+----------+
+|    1 | jhon |   23 | usa      |
++------+------+------+----------+
+1 row in set (0.00 sec)
+
+mysql> insert into people values(2,"jhon",23,"usa")
+    -> system\cls
+    -> system cls
+    -> system clr
+    -> system cls;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ls
+system cls
+system clr
+system cls' at line 1
+mysql> insert into people values(3,"jhony",28,"us")
+    -> (4,"robin",32,"uk");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(4,"robin",32,"uk")' at line 2
+mysql> insert into people values(2,"jhony",28,"us");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into people values(3,"robin",32,"uk");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into people values(4,"rolix",25,"ind");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into people values(5,"arjun",22,"jp");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> desc people;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int         | YES  |     | NULL    |       |
+| name     | varchar(30) | YES  |     | NULL    |       |
+| age      | int         | YES  |     | NULL    |       |
+| location | varchar(30) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from people;
++------+-------+------+----------+
+| id   | name  | age  | location |
++------+-------+------+----------+
+|    1 | jhon  |   23 | usa      |
+|    2 | jhony |   28 | us       |
+|    3 | robin |   32 | uk       |
+|    4 | rolix |   25 | ind      |
+|    5 | arjun |   22 | jp       |
++------+-------+------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select id from people where id=2;
++------+
+| id   |
++------+
+|    2 |
++------+
+1 row in set (0.01 sec)
+
+mysql> select id,name,age,location from people where id=2;
++------+-------+------+----------+
+| id   | name  | age  | location |
++------+-------+------+----------+
+|    2 | jhony |   28 | us       |
++------+-------+------+----------+
+1 row in set (0.00 sec)
+
+mysql> insert into people(id,name,age) values(5,"arjun",22,);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> insert into people(id,name,age) values(5,"arjun",22);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from people;
++------+-------+------+----------+
+| id   | name  | age  | location |
++------+-------+------+----------+
+|    1 | jhon  |   23 | usa      |
+|    2 | jhony |   28 | us       |
+|    3 | robin |   32 | uk       |
+|    4 | rolix |   25 | ind      |
+|    5 | arjun |   22 | jp       |
+|    5 | arjun |   22 | NULL     |
++------+-------+------+----------+
+6 rows in set (0.00 sec)
+
+mysql> insert into people values(6,"rahul",24,"us"),(7,"jack",28,"beng");
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from people;
++------+-------+------+----------+
+| id   | name  | age  | location |
++------+-------+------+----------+
+|    1 | jhon  |   23 | usa      |
+|    2 | jhony |   28 | us       |
+|    3 | robin |   32 | uk       |
+|    4 | rolix |   25 | ind      |
+|    5 | arjun |   22 | jp       |
+|    5 | arjun |   22 | NULL     |
+|    6 | rahul |   24 | us       |
+|    7 | jack  |   28 | beng     |
++------+-------+------+----------+
+8 rows in set (0.00 sec)
+
+mysql> select age+10 from people;
++--------+
+| age+10 |
++--------+
+|     33 |
+|     38 |
+|     42 |
+|     35 |
+|     32 |
+|     32 |
+|     34 |
+|     38 |
++--------+
+8 rows in set (0.01 sec)
+
+mysql> select name as personname;
+ERROR 1054 (42S22): Unknown column 'name' in 'field list'
+mysql> select name as personname from people;
++------------+
+| personname |
++------------+
+| jhon       |
+| jhony      |
+| robin      |
+| rolix      |
+| arjun      |
+| arjun      |
+| rahul      |
+| jack       |
++------------+
+8 rows in set (0.00 sec)
+
+mysql> select * from people;
++------+-------+------+----------+
+| id   | name  | age  | location |
++------+-------+------+----------+
+|    1 | jhon  |   23 | usa      |
+|    2 | jhony |   28 | us       |
+|    3 | robin |   32 | uk       |
+|    4 | rolix |   25 | ind      |
+|    5 | arjun |   22 | jp       |
+|    5 | arjun |   22 | NULL     |
+|    6 | rahul |   24 | us       |
+|    7 | jack  |   28 | beng     |
++------+-------+------+----------+
+8 rows in set (0.00 sec)
+
+mysql> select distinct location from people;
++----------+
+| location |
++----------+
+| usa      |
+| us       |
+| uk       |
+| ind      |
+| jp       |
+| NULL     |
+| beng     |
++----------+
+7 rows in set (0.00 sec)
+
+mysql> select distinct name, location from people;
++-------+----------+
+| name  | location |
++-------+----------+
+| jhon  | usa      |
+| jhony | us       |
+| robin | uk       |
+| rolix | ind      |
+| arjun | jp       |
+| arjun | NULL     |
+| rahul | us       |
+| jack  | beng     |
++-------+----------+
+8 rows in set (0.00 sec)
+
+mysql> select distinct name, age from people;
++-------+------+
+| name  | age  |
++-------+------+
+| jhon  |   23 |
+| jhony |   28 |
+| robin |   32 |
+| rolix |   25 |
+| arjun |   22 |
+| rahul |   24 |
+| jack  |   28 |
++-------+------+
+7 rows in set (0.00 sec)
+
+mysql>
+
+
+
+
+
+
+
+
+
+

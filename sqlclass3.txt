@@ -1,0 +1,54 @@
+show databases;
+use social_dh;
+select database();
+select
+ * from people;
+select * from people
+where age!=28;
+select * from people
+where age<>28;
+select * from people
+where location=null; 
+select * from people
+where age<28;
+
+select * from people
+where age<"r";
+select * from people
+where age<"d";
+select * from people
+where age>"d"
+
+
+select * from people;
+insert into people(id,name)values(8,"vini");
+create table sales(
+id int primary key auto_increment,
+amount int,
+sales_date date
+);
+desc sales;
+insert into sales(amount,sales_date)
+values
+
+(100,"2026-01-01"),
+(200,"2026-02-02"),
+(300,"2026-02-03"),
+(160,"2026-03-03"),
+(170,"2026-04-05"),
+(180,"2026-06-06")
+;
+select * from sales;
+select * from sales
+where sales_date<"2026-04-05";
+select * from sales
+
+select * from people 
+where age>25 and location="us";
+select * from people;
+select * from people 
+where age>25 and location="us";
+select * from people 
+where age>25 and( location="us" or location ="usa");
+select * from people 
+where age>25 and location="us" or location ="usa";
